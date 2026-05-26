@@ -47,7 +47,9 @@ function DicaPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="text-6xl md:text-7xl mb-6">{dica.emoji}</div>
+            <div className="mb-8 h-28 w-28 rounded-3xl bg-gradient-to-br from-[oklch(0.72_0.22_340/0.15)] to-[oklch(0.75_0.2_200/0.15)] p-3 flex items-center justify-center glow-pink">
+              <img src={dica.image} alt={dica.title} width={112} height={112} className="h-full w-full object-contain drop-shadow-[0_0_20px_oklch(0.72_0.22_340/0.6)]" />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
               {dica.title}
             </h1>
@@ -79,9 +81,12 @@ function DicaPage() {
             transition={{ delay: 0.6 }}
             className="mt-16 glass rounded-3xl p-8 flex items-center justify-between gap-4"
           >
-            <div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Próximo</div>
-              <div className="mt-1 font-bold text-lg">{next.emoji} {next.title}</div>
+            <div className="flex items-center gap-3">
+              <img src={next.image} alt="" width={40} height={40} className="h-10 w-10 object-contain" />
+              <div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">Próximo</div>
+                <div className="mt-1 font-bold text-lg">{next.title}</div>
+              </div>
             </div>
             <Link
               to="/dica/$slug"

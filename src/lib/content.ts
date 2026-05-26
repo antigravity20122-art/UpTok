@@ -1,7 +1,26 @@
+import quandoPostar from "@/assets/dica-quando-postar.png";
+import prenderAtencao from "@/assets/dica-prender-atencao.png";
+import retencao from "@/assets/dica-retencao.png";
+import musicas from "@/assets/dica-musicas.png";
+import views from "@/assets/dica-views.png";
+import comentarios from "@/assets/dica-comentarios.png";
+import fyp from "@/assets/dica-fyp.png";
+import hashtags from "@/assets/dica-hashtags.png";
+import viciantes from "@/assets/dica-viciantes.png";
+
+import toolChatgpt from "@/assets/tool-chatgpt.png";
+import toolGemini from "@/assets/tool-gemini.png";
+import toolClaude from "@/assets/tool-claude.png";
+import toolCapcut from "@/assets/tool-capcut.png";
+import toolCanva from "@/assets/tool-canva.png";
+import toolRunway from "@/assets/tool-runway.png";
+import toolKling from "@/assets/tool-kling.png";
+import toolElevenlabs from "@/assets/tool-elevenlabs.png";
+
 export type Dica = {
   slug: string;
   title: string;
-  emoji: string;
+  image: string;
   short: string;
   sections: { heading: string; body: string }[];
 };
@@ -9,7 +28,7 @@ export type Dica = {
 export const dicas: Dica[] = [
   {
     slug: "quando-postar",
-    emoji: "⏰",
+    image: quandoPostar,
     title: "Quando postar",
     short: "Os melhores horários para maximizar alcance no TikTok.",
     sections: [
@@ -20,7 +39,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "prender-atencao",
-    emoji: "🎯",
+    image: prenderAtencao,
     title: "Como prender atenção",
     short: "Os 3 primeiros segundos decidem se o vídeo viraliza.",
     sections: [
@@ -31,7 +50,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "aumentar-retencao",
-    emoji: "📈",
+    image: retencao,
     title: "Como aumentar retenção",
     short: "Retenção > tudo. Quem segura a audiência, viraliza.",
     sections: [
@@ -42,7 +61,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "musicas-virais",
-    emoji: "🎵",
+    image: musicas,
     title: "Como usar músicas virais",
     short: "Áudios em alta são atalho para o Para Você.",
     sections: [
@@ -53,7 +72,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "mais-views",
-    emoji: "👀",
+    image: views,
     title: "Como pegar mais views",
     short: "Estratégias para escalar visualizações organicamente.",
     sections: [
@@ -64,7 +83,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "comentarios",
-    emoji: "💬",
+    image: comentarios,
     title: "Como conseguir comentários",
     short: "Comentários são o ouro do algoritmo do TikTok.",
     sections: [
@@ -75,7 +94,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "para-voce",
-    emoji: "🚀",
+    image: fyp,
     title: "Como aparecer no Para Você",
     short: "O algoritmo do FYP decifrado.",
     sections: [
@@ -86,7 +105,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "hashtags",
-    emoji: "#️⃣",
+    image: hashtags,
     title: "Como usar hashtags",
     short: "A fórmula que ainda funciona em 2026.",
     sections: [
@@ -97,7 +116,7 @@ export const dicas: Dica[] = [
   },
   {
     slug: "videos-viciantes",
-    emoji: "🔥",
+    image: viciantes,
     title: "Como criar vídeos viciantes",
     short: "Estrutura comprovada para vídeos que prendem.",
     sections: [
@@ -108,17 +127,17 @@ export const dicas: Dica[] = [
   },
 ];
 
-export type Ferramenta = { name: string; emoji: string; desc: string; tag: string };
+export type Ferramenta = { name: string; image: string; desc: string; tag: string };
 
 export const ferramentas: Ferramenta[] = [
-  { name: "ChatGPT", emoji: "🤖", tag: "Texto", desc: "Gere roteiros, hooks e ideias de conteúdo em segundos." },
-  { name: "Gemini", emoji: "✨", tag: "Pesquisa", desc: "Análise de tendências e pesquisa profunda em tempo real." },
-  { name: "Claude", emoji: "📝", tag: "Roteiro", desc: "Roteiros longos, criativos e com excelente naturalidade." },
-  { name: "CapCut", emoji: "🎬", tag: "Edição", desc: "Editor #1 do TikTok. Cortes rápidos, legendas e efeitos virais." },
-  { name: "Canva", emoji: "🎨", tag: "Design", desc: "Thumbnails, capas e elementos visuais em minutos." },
-  { name: "Runway", emoji: "🎞️", tag: "Vídeo IA", desc: "Crie cenas impossíveis com vídeo gerado por IA." },
-  { name: "Kling", emoji: "🎥", tag: "Vídeo IA", desc: "Geração de vídeo cinematográfico ultra-realista." },
-  { name: "ElevenLabs", emoji: "🎙️", tag: "Voz IA", desc: "Vozes humanas para narração e dublagem dos seus vídeos." },
+  { name: "ChatGPT", image: toolChatgpt, tag: "Texto", desc: "Gere roteiros, hooks e ideias de conteúdo em segundos." },
+  { name: "Gemini", image: toolGemini, tag: "Pesquisa", desc: "Análise de tendências e pesquisa profunda em tempo real." },
+  { name: "Claude", image: toolClaude, tag: "Roteiro", desc: "Roteiros longos, criativos e com excelente naturalidade." },
+  { name: "CapCut", image: toolCapcut, tag: "Edição", desc: "Editor #1 do TikTok. Cortes rápidos, legendas e efeitos virais." },
+  { name: "Canva", image: toolCanva, tag: "Design", desc: "Thumbnails, capas e elementos visuais em minutos." },
+  { name: "Runway", image: toolRunway, tag: "Vídeo IA", desc: "Crie cenas impossíveis com vídeo gerado por IA." },
+  { name: "Kling", image: toolKling, tag: "Vídeo IA", desc: "Geração de vídeo cinematográfico ultra-realista." },
+  { name: "ElevenLabs", image: toolElevenlabs, tag: "Voz IA", desc: "Vozes humanas para narração e dublagem dos seus vídeos." },
 ];
 
 export const depoimentos = [

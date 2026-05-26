@@ -63,11 +63,12 @@
 
 :root {
   --radius: 1rem;
-  --background: oklch(0.13 0.02 280);
+  --background: oklch(0.08 0.015 280);
   --foreground: oklch(0.98 0.01 280);
-  --card: oklch(0.17 0.03 280);
+  --card: oklch(0.11 0.02 280);
+
   --card-foreground: oklch(0.98 0.01 280);
-  --popover: oklch(0.17 0.03 280);
+  --popover: oklch(0.11 0.02 280);
   --popover-foreground: oklch(0.98 0.01 280);
   --primary: oklch(0.72 0.22 340);
   --primary-foreground: oklch(0.13 0.02 280);
@@ -135,7 +136,7 @@
   .glow-pink { box-shadow: var(--glow-pink); }
   .glow-cyan { box-shadow: var(--glow-cyan); }
   .glass {
-    background: oklch(0.2 0.03 280 / 0.5);
+    background: oklch(0.13 0.025 280 / 0.6);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid oklch(1 0 0 / 0.08);

@@ -5,8 +5,8 @@ export function Nav() {
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/60 border-b border-border/50">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="font-bold text-lg tracking-tight">
-          <span className="text-gradient">Viraliza</span>
-          <span className="text-foreground">.tk</span>
+          <span className="text-gradient">Up</span>
+          <span className="text-foreground">Tok</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="/#dicas" className="hover:text-foreground transition-colors">Dicas</a>
@@ -29,7 +29,7 @@ export function Footer() {
     <footer className="border-t border-border/50 mt-32 py-12">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row justify-between gap-6 text-sm text-muted-foreground">
         <div>
-          <div className="font-bold text-foreground"><span className="text-gradient">Viraliza</span>.tk</div>
+          <div className="font-bold text-foreground"><span className="text-gradient">Up</span>Tok</div>
           <p className="mt-2">Conteúdo 100% gratuito. Feito para criadores.</p>
         </div>
         <p>© 2026 — Todos os direitos reservados.</p>
