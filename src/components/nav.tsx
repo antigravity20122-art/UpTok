@@ -9,6 +9,7 @@ export function Nav() {
           <span className="text-foreground">Tok</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+          <a href="/#virais" className="hover:text-foreground transition-colors">Virais</a>
           <a href="/#dicas" className="hover:text-foreground transition-colors">Dicas</a>
           <a href="/#ferramentas" className="hover:text-foreground transition-colors">Ferramentas</a>
           <a href="/#depoimentos" className="hover:text-foreground transition-colors">Resultados</a>

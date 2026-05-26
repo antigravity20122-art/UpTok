@@ -1,63 +1,49 @@
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export function BackgroundOrbs() {
-  const mx = useMotionValue(50);
-  const my = useMotionValue(50);
-  const sx = useSpring(mx, { stiffness: 50, damping: 20 });
-  const sy = useSpring(my, { stiffness: 50, damping: 20 });
-
-  useEffect(() => {
-    const onMove = (e: PointerEvent) => {
-      mx.set((e.clientX / window.innerWidth) * 100);
-      my.set((e.clientY / window.innerHeight) * 100);
-    };
-    window.addEventListener("pointermove", onMove);
-    return () => window.removeEventListener("pointermove", onMove);
-  }, [mx, my]);
-
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-background">
-      {/* Animated aurora mesh */}
-      <div className="absolute inset-0 animate-aurora opacity-80"
-        style={{
-          background:
-            "conic-gradient(from 0deg at 30% 30%, oklch(0.72 0.22 340 / 0.35), transparent 30%, oklch(0.75 0.2 200 / 0.3) 50%, transparent 70%, oklch(0.7 0.22 300 / 0.3) 90%, oklch(0.72 0.22 340 / 0.35))",
-          filter: "blur(120px)",
-        }}
-      />
-      {/* Mouse-follow spotlight */}
-      <motion.div
+    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[oklch(0.07_0.015_280)]">
+      {/* Deep vignette base */}
+      <div
         className="absolute inset-0"
         style={{
-          background: useTransform(
-            [sx, sy],
-            ([x, y]) =>
-              `radial-gradient(600px circle at ${x}% ${y}%, oklch(0.82 0.18 200 / 0.18), transparent 60%)`
-          ) as unknown as string,
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.16 0.05 320 / 0.55), transparent 60%), radial-gradient(ellipse 70% 50% at 50% 100%, oklch(0.14 0.05 220 / 0.5), transparent 60%)",
         }}
       />
-      {/* Floating orbs */}
-      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-[oklch(0.72_0.22_340/0.25)] blur-[140px] animate-float-orb" />
-      <div className="absolute top-1/3 -right-40 h-[600px] w-[600px] rounded-full bg-[oklch(0.75_0.2_200/0.2)] blur-[160px] animate-float-orb" style={{ animationDelay: "-6s" }} />
-      <div className="absolute bottom-0 left-1/3 h-[500px] w-[500px] rounded-full bg-[oklch(0.7_0.22_300/0.18)] blur-[150px] animate-float-orb" style={{ animationDelay: "-12s" }} />
 
-      {/* Grid */}
+      {/* Slow drifting glow blobs */}
+      <div className="absolute -top-40 -left-32 h-[460px] w-[460px] rounded-full bg-[oklch(0.55_0.22_340/0.35)] blur-[140px] animate-float-orb" />
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute top-1/3 -right-40 h-[520px] w-[520px] rounded-full bg-[oklch(0.55_0.2_210/0.3)] blur-[160px] animate-float-orb"
+        style={{ animationDelay: "-8s" }}
+      />
+      <div
+        className="absolute bottom-[-10%] left-1/3 h-[480px] w-[480px] rounded-full bg-[oklch(0.5_0.22_300/0.28)] blur-[150px] animate-float-orb"
+        style={{ animationDelay: "-14s" }}
+      />
+
+      {/* Subtle dot grid */}
+      <div
+        className="absolute inset-0 opacity-[0.18]"
         style={{
           backgroundImage:
-            "linear-gradient(oklch(1 0 0) 1px, transparent 1px), linear-gradient(90deg, oklch(1 0 0) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+            "radial-gradient(oklch(1 0 0 / 0.18) 1px, transparent 1px)",
+          backgroundSize: "26px 26px",
+          maskImage:
+            "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse at center, black 30%, transparent 75%)",
         }}
       />
 
-      {/* Scanning beam */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[oklch(0.82_0.18_200/0.8)] to-transparent animate-scan-beam" />
+      {/* Top edge neon line */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[oklch(0.72_0.22_340/0.6)] to-transparent" />
 
       {/* Noise */}
-      <div className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
+      <div
+        className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.7'/></svg>\")",
@@ -111,14 +97,15 @@ export function MagneticCard({ children, className = "" }: { children: React.Rea
   const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rx = useSpring(useTransform(y, [-50, 50], [10, -10]), { stiffness: 200, damping: 20 });
-  const ry = useSpring(useTransform(x, [-50, 50], [-10, 10]), { stiffness: 200, damping: 20 });
+  const rx = useSpring(useTransform(y, [-50, 50], [6, -6]), { stiffness: 200, damping: 20 });
+  const ry = useSpring(useTransform(x, [-50, 50], [-6, 6]), { stiffness: 200, damping: 20 });
 
   return (
     <motion.div
       ref={ref}
       style={{ rotateX: rx, rotateY: ry, transformPerspective: 1000 }}
       onPointerMove={(e) => {
+        if (e.pointerType !== "mouse") return;
         const r = ref.current?.getBoundingClientRect();
         if (!r) return;
         x.set(e.clientX - r.left - r.width / 2);
