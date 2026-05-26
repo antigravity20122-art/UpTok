@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { BackgroundOrbs, Reveal, Marquee, MagneticCard, ParallaxY } from "@/components/visual";
 import { Nav, Footer } from "@/components/nav";
 import { dicas, ferramentas, depoimentos } from "@/lib/content";
+import { videosVirais } from "@/lib/videos";
 
 export const Route = createFileRoute("/")({
   head: () => ({
