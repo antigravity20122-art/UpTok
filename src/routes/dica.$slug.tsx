@@ -55,7 +55,7 @@ function DicaPage() {
           </motion.div>
 
           <div className="mt-16 space-y-6">
-            {dica.sections.map((s, i) => (
+            {dica.sections.map((s: { heading: string; body: string }, i: number) => (
               <motion.div
                 key={s.heading}
                 initial={{ opacity: 0, y: 20 }}
