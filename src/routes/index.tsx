@@ -155,7 +155,9 @@ function Index() {
               <Reveal key={f.name} delay={i * 0.04}>
                 <div className="group glass rounded-3xl p-6 h-full hover:border-[oklch(0.82_0.18_200/0.5)] transition-all hover:-translate-y-1">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="text-3xl">{f.emoji}</div>
+                    <div className="h-14 w-14 rounded-xl bg-gradient-to-br from-[oklch(0.75_0.2_200/0.15)] to-[oklch(0.7_0.22_300/0.15)] p-2 flex items-center justify-center">
+                      <img src={f.image} alt={f.name} loading="lazy" width={56} height={56} className="h-full w-full object-contain drop-shadow-[0_0_10px_oklch(0.82_0.18_200/0.5)]" />
+                    </div>
                     <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-[oklch(1_0_0/0.05)] text-muted-foreground">{f.tag}</span>
                   </div>
                   <h3 className="font-bold text-lg">{f.name}</h3>
