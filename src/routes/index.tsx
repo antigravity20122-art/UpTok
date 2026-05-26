@@ -36,8 +36,8 @@ function Index() {
       <section ref={heroRef} className="relative px-6 pt-20 pb-32 md:pt-32 md:pb-44 overflow-hidden">
         <motion.div style={{ y: heroY, scale: heroScale, opacity: heroOpacity }} className="mx-auto max-w-6xl text-center relative">
           {/* Ambient ring */}
-          <div className="pointer-events-none absolute left-1/2 top-40 -translate-x-1/2 h-[400px] w-[400px] rounded-full border border-[oklch(0.72_0.22_340/0.2)] animate-spin-slow" />
-          <div className="pointer-events-none absolute left-1/2 top-32 -translate-x-1/2 h-[520px] w-[520px] rounded-full border border-[oklch(0.82_0.18_200/0.12)] animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
+          <div className="pointer-events-none absolute left-1/2 top-40 -translate-x-1/2 h-[300px] w-[300px] md:h-[400px] md:w-[400px] rounded-full border border-[oklch(0.72_0.22_340/0.2)] animate-spin-slow" />
+          <div className="pointer-events-none absolute left-1/2 top-32 -translate-x-1/2 h-[380px] w-[380px] md:h-[520px] md:w-[520px] rounded-full border border-[oklch(0.82_0.18_200/0.12)] animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "30s" }} />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
