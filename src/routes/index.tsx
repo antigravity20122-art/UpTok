@@ -143,6 +143,57 @@ function Index() {
       {/* MARQUEE */}
       <Marquee items={["For You Page", "Hook brutal", "Retenção", "Algoritmo", "Viralizar", "Watch Time", "Trending Sounds", "CapCut", "Storytelling"]} />
 
+      {/* VIDEOS VIRAIS REAIS */}
+      <section id="virais" className="px-6 py-32 scroll-mt-20 relative">
+        <div className="mx-auto max-w-6xl">
+          <Reveal>
+            <div className="text-center mb-16">
+              <div className="text-sm text-[oklch(0.72_0.22_340)] uppercase tracking-[0.3em] mb-4">// Estudo de caso</div>
+              <h2 className="text-4xl md:text-7xl font-bold tracking-tight leading-[1.05]">
+                Vídeos reais que <br />
+                <span className="animate-gradient-text">explodiram.</span>
+              </h2>
+              <p className="mt-6 text-muted-foreground max-w-2xl mx-auto text-lg">
+                Por que cada um desses TikToks viralizou — engenharia reversa dos maiores hits da plataforma.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {videosVirais.map((v, i) => (
+              <Reveal key={v.id} delay={(i % 2) * 0.08}>
+                <div className="glass rounded-3xl p-5 md:p-6 relative overflow-hidden group hover:border-[oklch(0.72_0.22_340/0.5)] transition-colors">
+                  <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[oklch(0.72_0.22_340/0.25)] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative flex flex-col sm:flex-row gap-5">
+                    <div className="shrink-0 mx-auto sm:mx-0">
+                      <div className="rounded-2xl overflow-hidden border border-border/60 bg-black w-[280px] aspect-[9/16] shadow-[0_20px_60px_-15px_oklch(0.72_0.22_340/0.5)]">
+                        <iframe
+                          src={`https://www.tiktok.com/embed/v2/${v.id}?lang=pt-BR`}
+                          allow="encrypted-media; fullscreen"
+                          allowFullScreen
+                          loading="lazy"
+                          className="h-full w-full"
+                          title={`${v.author} — ${v.title}`}
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 text-xs">
+                        <span className="px-2 py-1 rounded-full bg-[oklch(0.72_0.22_340/0.15)] text-[oklch(0.85_0.15_340)] font-mono">{v.author}</span>
+                        <span className="px-2 py-1 rounded-full bg-[oklch(0.82_0.18_200/0.15)] text-[oklch(0.85_0.15_200)] font-mono">{v.views} views</span>
+                      </div>
+                      <h3 className="mt-3 text-xl font-bold tracking-tight">{v.title}</h3>
+                      <div className="mt-4 text-xs uppercase tracking-[0.25em] text-muted-foreground">Por que viralizou</div>
+                      <p className="mt-2 text-sm md:text-base text-foreground/85 leading-relaxed">{v.reason}</p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* DICAS */}
       <section id="dicas" className="px-6 py-32 scroll-mt-20 relative">
         <div className="mx-auto max-w-6xl">
