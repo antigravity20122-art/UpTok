@@ -72,14 +72,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "UpTok" },
+      { name: "description", content: "🚀 UpTok — Descrição
+
+UpTok é uma plataforma de conteúdo focada em crescimento e viralização no TikTok, com estratégias, ideias e dicas práticas para aumentar a" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "UpTok" },
+      { property: "og:description", content: "🚀 UpTok — Descrição
+
+UpTok é uma plataforma de conteúdo focada em crescimento e viralização no TikTok, com estratégias, ideias e dicas práticas para aumentar a" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "UpTok" },
+      { name: "twitter:description", content: "🚀 UpTok — Descrição
+
+UpTok é uma plataforma de conteúdo focada em crescimento e viralização no TikTok, com estratégias, ideias e dicas práticas para aumentar a" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/80f3e76e-a7c4-451a-a39c-07530ec6530f/id-preview-650a4977--2b548099-2622-48f8-af00-b3f47fa7fbba.lovable.app-1779826065261.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/80f3e76e-a7c4-451a-a39c-07530ec6530f/id-preview-650a4977--2b548099-2622-48f8-af00-b3f47fa7fbba.lovable.app-1779826065261.png" },
     ],
     links: [
       {
