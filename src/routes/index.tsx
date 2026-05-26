@@ -118,7 +118,9 @@ function Index() {
                 >
                   <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-[oklch(0.72_0.22_340/0.25)] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative">
-                    <div className="text-4xl mb-4">{d.emoji}</div>
+                    <div className="mb-4 h-16 w-16 rounded-2xl bg-gradient-to-br from-[oklch(0.72_0.22_340/0.15)] to-[oklch(0.75_0.2_200/0.15)] p-2 flex items-center justify-center">
+                      <img src={d.image} alt={d.title} loading="lazy" width={64} height={64} className="h-full w-full object-contain drop-shadow-[0_0_12px_oklch(0.72_0.22_340/0.5)]" />
+                    </div>
                     <h3 className="text-xl font-bold tracking-tight">{d.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{d.short}</p>
                     <div className="mt-6 inline-flex items-center text-sm text-[oklch(0.82_0.18_200)] font-medium">
