@@ -119,10 +119,9 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    background-image: var(--gradient-hero);
-    background-attachment: fixed;
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
