@@ -29,7 +29,7 @@ export function Footer() {
     <footer className="border-t border-border/50 mt-32 py-12">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row justify-between gap-6 text-sm text-muted-foreground">
         <div>
-          <div className="font-bold text-foreground"><span className="text-gradient">Viraliza</span>.tk</div>
+          <div className="font-bold text-foreground"><span className="text-gradient">Up</span>Tok</div>
           <p className="mt-2">Conteúdo 100% gratuito. Feito para criadores.</p>
         </div>
         <p>© 2026 — Todos os direitos reservados.</p>
