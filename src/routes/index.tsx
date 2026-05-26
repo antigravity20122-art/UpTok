@@ -50,7 +50,7 @@ function Index() {
             • Atualizado para 2026
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-[8.5rem] font-bold tracking-tight leading-[0.95] relative">
+          <h1 className="text-[3.25rem] sm:text-6xl md:text-7xl lg:text-[8.5rem] font-bold tracking-tight leading-[0.95] relative">
             <motion.span
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
