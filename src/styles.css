@@ -152,5 +152,55 @@
     50% { opacity: 1; }
   }
   .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+  @keyframes aurora {
+    0%, 100% { transform: rotate(0deg) scale(1.2); }
+    50% { transform: rotate(180deg) scale(1.6); }
+  }
+  .animate-aurora { animation: aurora 30s linear infinite; }
+
+  @keyframes scan-beam {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+  .animate-scan-beam { animation: scan-beam 8s linear infinite; }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.333%); }
+  }
+  .animate-marquee { animation: marquee 30s linear infinite; }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .animate-gradient-text {
+    background: linear-gradient(90deg, oklch(0.72 0.22 340), oklch(0.82 0.18 200), oklch(0.7 0.22 300), oklch(0.72 0.22 340));
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  @keyframes tilt {
+    0%, 100% { transform: rotate(-1.5deg); }
+    50% { transform: rotate(1.5deg); }
+  }
+  .animate-tilt { animation: tilt 8s ease-in-out infinite; }
+
+  @keyframes glow-ring {
+    0%, 100% { box-shadow: 0 0 30px oklch(0.72 0.22 340 / 0.5), 0 0 60px oklch(0.72 0.22 340 / 0.3); }
+    50% { box-shadow: 0 0 60px oklch(0.82 0.18 200 / 0.7), 0 0 120px oklch(0.82 0.18 200 / 0.4); }
+  }
+  .animate-glow-ring { animation: glow-ring 4s ease-in-out infinite; }
+
+  @keyframes spin-slow {
+    to { transform: rotate(360deg); }
+  }
+  .animate-spin-slow { animation: spin-slow 20s linear infinite; }
 }
 
