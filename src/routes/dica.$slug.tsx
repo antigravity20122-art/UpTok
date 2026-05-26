@@ -81,9 +81,12 @@ function DicaPage() {
             transition={{ delay: 0.6 }}
             className="mt-16 glass rounded-3xl p-8 flex items-center justify-between gap-4"
           >
-            <div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Próximo</div>
-              <div className="mt-1 font-bold text-lg">{next.emoji} {next.title}</div>
+            <div className="flex items-center gap-3">
+              <img src={next.image} alt="" width={40} height={40} className="h-10 w-10 object-contain" />
+              <div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">Próximo</div>
+                <div className="mt-1 font-bold text-lg">{next.title}</div>
+              </div>
             </div>
             <Link
               to="/dica/$slug"
