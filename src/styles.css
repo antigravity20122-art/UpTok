@@ -136,7 +136,7 @@
   .glow-pink { box-shadow: var(--glow-pink); }
   .glow-cyan { box-shadow: var(--glow-cyan); }
   .glass {
-    background: oklch(0.2 0.03 280 / 0.5);
+    background: oklch(0.13 0.025 280 / 0.6);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid oklch(1 0 0 / 0.08);
