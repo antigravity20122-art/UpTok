@@ -125,6 +125,94 @@ export const dicas: Dica[] = [
       { heading: "Cliffhanger no meio", body: "Antes da resposta, jogue 'mas tem um detalhe...' e mostre o resultado. Ninguém pula." },
     ],
   },
+  {
+    slug: "thumbnail-perfeita",
+    image: views,
+    title: "Thumbnail que para o dedo",
+    short: "A capa decide se o seu vídeo é clicado no perfil.",
+    sections: [
+      { heading: "Rosto + emoção", body: "Capas com rosto expressivo têm CTR 40% maior. Mostre surpresa, raiva ou euforia." },
+      { heading: "Contraste brutal", body: "Fundo escuro + texto branco gigante. Legível no thumbnail de 1cm do perfil." },
+      { heading: "Máximo 3 palavras", body: "'NÃO FAÇA ISSO'. 'SEGREDO REVELADO'. Curto, polarizador, urgente." },
+    ],
+  },
+  {
+    slug: "legendas-magneticas",
+    image: comentarios,
+    title: "Legendas magnéticas",
+    short: "A legenda é o segundo hook. Use a favor.",
+    sections: [
+      { heading: "Crie curiosidade", body: "'Espera até o final 👀' funciona. 'Confesso que duvidei.' funciona. Pergunta direta funciona." },
+      { heading: "Quebra de linha", body: "Use 3 linhas curtas em vez de 1 longa. Sua legenda fica visível antes do 'mais'." },
+      { heading: "Emoji estratégico", body: "1-2 emojis no máximo. Eles funcionam como âncoras visuais — não como decoração." },
+    ],
+  },
+  {
+    slug: "duetos-stitches",
+    image: fyp,
+    title: "Duetos e Stitches que viralizam",
+    short: "Pegue carona em vídeos grandes do seu nicho.",
+    sections: [
+      { heading: "Encontre vídeos virais", body: "Filtre por 'curtidos esta semana' no seu nicho. Stitch com os 3 segundos mais polêmicos." },
+      { heading: "Adicione valor", body: "Não concorde só. Discorde, complemente, traga dado. O algoritmo recompensa originalidade." },
+      { heading: "Tag o criador", body: "Mencione no comentário. Se ele responder, sua reach dobra. Networking é viral." },
+    ],
+  },
+  {
+    slug: "live-tiktok",
+    image: viciantes,
+    title: "Como usar lives para crescer",
+    short: "Live é o atalho secreto que poucos exploram.",
+    sections: [
+      { heading: "Faça lives curtas e frequentes", body: "30 min, 3x por semana > 1 live de 3h. O algoritmo entrega cada nova live a novos usuários." },
+      { heading: "Pin de comentário", body: "Fixe um CTA com sua pergunta principal. Convida o lurker a participar." },
+      { heading: "Pulse Mode", body: "Lives geram tráfego direto pro perfil. Cada live = pico de seguidores se o conteúdo for bom." },
+    ],
+  },
+  {
+    slug: "nichar",
+    image: hashtags,
+    title: "A arte de nichar fundo",
+    short: "Quanto mais específico, mais o algoritmo entrega.",
+    sections: [
+      { heading: "Sub-nicho > nicho", body: "'Receitas' é amplo demais. 'Receitas de bolo sem forno' é ouro. Especialização = autoridade." },
+      { heading: "Persona única", body: "Um único arquétipo, um único tom, uma única estética visual. Repetição cria reconhecimento." },
+      { heading: "Faça 'série'", body: "Episódio 1, 2, 3… Cria expectativa. Cria binge. Cria seguidor — não viewer." },
+    ],
+  },
+  {
+    slug: "analise",
+    image: retencao,
+    title: "Analisar concorrência sem copiar",
+    short: "Espie os topo do seu nicho. Mas reescreva.",
+    sections: [
+      { heading: "Lista dos 10", body: "Salve 10 perfis maiores. Estude os 3 vídeos mais virais de cada um. Identifique padrão." },
+      { heading: "Engenharia reversa do hook", body: "Pegue os hooks que funcionaram, adapte pra sua voz. Estrutura igual, conteúdo diferente." },
+      { heading: "Gap de conteúdo", body: "Veja qual pergunta os seguidores fazem nos comentários e ninguém responde. Vai lá e responde." },
+    ],
+  },
+  {
+    slug: "repostar",
+    image: musicas,
+    title: "Quando republicar vencedores",
+    short: "Vídeo bom merece segunda chance.",
+    sections: [
+      { heading: "Espere 60 dias", body: "Republique vídeos que performaram bem após 2 meses. Novo público vai descobrir." },
+      { heading: "Mude 20%", body: "Novo título, nova capa, novo áudio. O algoritmo trata como original — sua reach reseta." },
+      { heading: "Cross-format", body: "Vire fotos virais em vídeo, e vídeos virais em carrosséis. Mesma ideia, novo formato." },
+    ],
+  },
+  {
+    slug: "storytelling",
+    image: prenderAtencao,
+    title: "Storytelling em 30 segundos",
+    short: "História prende mais que dica direta.",
+    sections: [
+      { heading: "Conflito no primeiro frame", body: "'Eu perdi tudo aos 22.' Não comece pelo contexto — comece pelo conflito." },
+      { heading: "Jornada visível", body: "Mostre antes/depois, mesmo que sutil. O cérebro adora transformação." },
+      { heading: "Moral implícita", body: "Não termine com 'a lição é…'. Termine com a cena. Deixa o viewer concluir — ele comenta a moral pra você." },
+    ],
+  },
 ];
 
 export type Ferramenta = { name: string; image: string; desc: string; tag: string };
